@@ -14,5 +14,9 @@ AllCops:
     - 'config.ru'
     - 'spec/**/*'
     - 'bin/**/*'
+    - 'app/channels/**/*'
+    - 'app/jobs/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
     - 'node_modules/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
