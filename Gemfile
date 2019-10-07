@@ -21,6 +21,8 @@ gem 'jquery'
 gem 'figaro'
 gem 'factory_bot_rails'
 gem 'faker'
+gem 'rubocop'
+gem "rubocop-rails_config"
 gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
 gem 'will_paginate'
