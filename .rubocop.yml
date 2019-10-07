@@ -1,3 +1,18 @@
 inherit_gem:
   rubocop-rails_config:
     - config/rails.yml
+
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.4.1
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'lib/**/*'
+    - 'config.ru'
+    - 'spec/**/*'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
