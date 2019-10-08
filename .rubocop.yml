@@ -5,18 +5,15 @@ inherit_gem:
 AllCops:
   TargetRubyVersion: 2.4.1
   Exclude:
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'lib/**/*'
-    - 'config.ru'
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
+    - 'config/environments/**/*'
+    - 'config/initializers/assets.rb'
+    - 'config/boot.rb'
     - 'spec/**/*'
     - 'bin/**/*'
-    - 'app/channels/**/*'
-    - 'app/jobs/**/*'
     - 'Gemfile'
-    - 'Rakefile'
     - 'node_modules/**/*'
-    - !ruby/regexp /old_and_unused\.rb$/
   StyleGuideCopsOnly:
     FrozenStringLiteralComment:
       Enabled: false

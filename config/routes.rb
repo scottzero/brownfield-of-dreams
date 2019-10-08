@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :tutorials, only:[:show, :index]
-      resources :videos, only:[:show]
+      resources :tutorials, only: [:show, :index]
+      resources :videos, only: [:show]
     end
   end
 
-  root 'welcome#index'
-  get 'tags/:tag', to: 'welcome#index', as: :tag
-  get '/register', to: 'users#new'
+  root "welcome#index"
+  get "tags/:tag", to: "welcome#index", as: :tag
+  get "/register", to: "users#new"
 
   namespace :admin do
     get "/dashboard", to: "dashboard#show"
@@ -24,16 +24,16 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/login', to: "sessions#new"
-  post '/login', to: "sessions#create"
-  delete '/logout', to: "sessions#destroy"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 
-  get '/dashboard', to: 'users#show'
-  get '/about', to: 'about#show'
-  get '/get_started', to: 'get_started#show'
+  get "/dashboard", to: "users#show"
+  get "/about", to: "about#show"
+  get "/get_started", to: "get_started#show"
 
   # Is this being used?
-  get '/video', to: 'video#show'
+  get "/video", to: "video#show"
 
   resources :users, only: [:new, :create, :update, :edit]
 
@@ -41,5 +41,5 @@ Rails.application.routes.draw do
     resources :videos, only: [:show, :index]
   end
 
-  resources :user_videos, only:[:create, :destroy]
+  resources :user_videos, only: [:create, :destroy]
 end
