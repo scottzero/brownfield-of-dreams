@@ -21,12 +21,11 @@ class TutorialFacade < SimpleDelegator
   end
 
   private
+    def current_video_index
+      videos.index(current_video)
+    end
 
-  def current_video_index
-    videos.index(current_video)
-  end
-
-  def maximum_video_position
-    videos.max_by { |video| video.position }.position
-  end
+    def maximum_video_position
+      videos.max_by { |video| video.position }.position
+    end
 end
