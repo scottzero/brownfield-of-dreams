@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "github API shows repos" do
     it "on user dash", :vcr do
-        evette = create(:user, github_token: ENV["github_token"])
+        evette = create(:user, github_token: 'test')
 
         visit '/'
 
