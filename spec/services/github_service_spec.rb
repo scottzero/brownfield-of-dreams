@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "github api service" do
     it "returns a users repos", :vcr do
-        evette = create(:user, github_token: ENV["github_token"])
+        evette = create(:user, github_token: ENV["GITHUB_TOKEN"])
         service = GithubService.new
         repos = service.get_repos(evette)
 

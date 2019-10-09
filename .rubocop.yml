@@ -14,6 +14,7 @@ AllCops:
     - 'bin/**/*'
     - 'Gemfile'
     - 'node_modules/**/*'
+    - 'config/initializers/omniauth.rb'
   StyleGuideCopsOnly:
     FrozenStringLiteralComment:
       Enabled: false
