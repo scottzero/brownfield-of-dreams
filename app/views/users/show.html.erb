@@ -12,10 +12,23 @@
   </section>
   <% if current_user.github_token? %>
     <section>
-      <h1>Github Repos</h1>
-      <% @user.repos.each do |repo| %>
-        <p><%= link_to "#{repo.name}", repo.url %></p>
+      <h2>Github</h2>
+        <h1>Repos</h1>
+        <% @github.five_repos.each do |repo| %>
+          <p><%= link_to "#{repo.name}", repo.url %></p>
+        <% end %>
+      <h1>Followers</h1>
+      <% @github.followers.each do |github_user| %>
+      <p><%= link_to "#{github_user.name}", github_user.url %></p>
       <% end %>
-    </section>   
+      <h1>Following</h1>
+      <% @github.following.each do |github_user| %>
+      <p><%= link_to "#{github_user.name}", github_user.url %></p>
+      <% end %>
+    </section>
+    <% else %>
+      <section>
+        <%= link_to "Link to Github", github_login_path %>
+      </section>
   <% end %>
 </section>
