@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "github API shows repos" do
-    it "on user dash", :vcr do
-        evette = create(:user, github_token: 'test')
+describe "github API does not show repos" do
+    it "if user is not logged in", :vcr do
+        evette = create(:user)
 
         visit '/'
 
@@ -13,6 +13,6 @@ describe "github API shows repos" do
 
         click_on 'Log In'
 
-        expect(page).to have_content("Github Repos")
+        expect(page).to_not have_content("Github Repos")
     end
 end
