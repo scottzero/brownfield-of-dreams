@@ -25,7 +25,7 @@ gem 'rubocop'
 gem "rubocop-rails_config"
 gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-github'
+gem 'omniauth-github', '~> 1.1.1'
 gem 'will_paginate'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'omniauth-census', git: "https://github.com/turingschool-projects/omniauth-census"
