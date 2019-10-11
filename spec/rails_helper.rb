@@ -39,6 +39,19 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+OmniAuth.config.test_mode = true
+
+omniauth_hash = { 'provider' => 'github',
+                  'uid' => '12345',
+                  'info' => {
+                    'nickname' => 'wolfejob'
+                  },
+                  'credentials' => {
+                    'token' => ENV['GITHUB_TOKEN']
+                  } }
+
+OmniAuth.config.add_mock(:github, omniauth_hash)
+
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
