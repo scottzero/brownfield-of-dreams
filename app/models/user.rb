@@ -20,6 +20,10 @@ class User < ApplicationRecord
     self.save
   end
 
+  def bookmarks
+    videos.order("videos.tutorial_id, videos.position")
+  end
+
   def activate
     self.update(status: 1, confirm_token: nil)
     self.save
