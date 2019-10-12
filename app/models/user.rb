@@ -20,6 +20,10 @@ class User < ApplicationRecord
     self.save
   end
 
+  def bookmarks
+    videos.order("videos.tutorial_id, videos.position")
+  end
+
   def activate
     self.update(status: 1, confirm_token: nil)
     self.save
@@ -28,7 +32,7 @@ class User < ApplicationRecord
   private
     def confirmation_token
       if self.confirm_token.blank?
-          self.confirm_token = SecureRandom.urlsafe_base64.to_s
+        self.confirm_token = SecureRandom.urlsafe_base64.to_s
       end
     end
 end
