@@ -1,7 +1,10 @@
 class InvitesController < ApplicationController
   def create
-    mail = GithubInviteMailer.invite(current_user, params[:github_handle]).deliver_now
-    if !mail
+    invitee = InvitesFacade.new(params[:github_handle])
+    email = invitee.email
+    name = invitee.name
+    GithubInviteMailer.invite(current_user, email, name).deliver_now
+    if !email
       flash[:notice] = "No email listed for this user"
     else
       flash[:notice] = "Invite sent!"
