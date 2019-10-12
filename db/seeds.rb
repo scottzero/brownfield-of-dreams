@@ -77,7 +77,7 @@ m3_tutorial.videos.create!({
   "description"=> Faker::Hipster.paragraph(2, true),
   "video_id"=>"cv1VQ_9OqvE",
   "thumbnail"=>"https://i.ytimg.com/vi/cv1VQ_9OqvE/hqdefault.jpg",
-  "position"=>1
+  "position"=>0
 })
 m3_tutorial.videos.create!({
   "title"=>"Rails Integration Testing",
@@ -115,4 +115,4 @@ m3_tutorial.videos.create!({
   "position"=>6
 })
 
-User.create!(email: "admin1@example.com", first_name: "Bossy", last_name: "McBosserton", password:  "password", role: 1)
+User.create!(email: "admin1234567@example.com", first_name: "Bossy", last_name: "McBosserton", password:  "password", role: 1)
