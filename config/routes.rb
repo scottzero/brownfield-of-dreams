@@ -32,7 +32,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/dashboard", to: "users#show"
-  get "/activated", to: "activated_users#show"
   get "/invite", to: "invites#new"
   post "/invite", to: "invites#create"
   get "/about", to: "about#show"
