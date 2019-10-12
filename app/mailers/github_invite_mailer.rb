@@ -4,7 +4,7 @@ class GithubInviteMailer < ApplicationMailer
     @email = invitee.email
     @name = invitee.name
     @user = user
-    if @email != []
+    if !@email
       mail(to: @email, subject: "#{@user.first_name} sent you an invite!")
     end
   end
