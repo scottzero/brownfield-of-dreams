@@ -13,7 +13,7 @@ describe "github API" do
 
         click_on 'Log In'
 
-        expect(page).to have_content("Link to Github")
+        expect(page).to have_button("Link to Github")
     end
 
     it "does show github info if user is connected to github", :vcr do

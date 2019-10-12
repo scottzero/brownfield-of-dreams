@@ -1,5 +1,4 @@
 class GithubEmailService
-
   def initialize(gh_handle)
     @gh_handle = gh_handle
   end

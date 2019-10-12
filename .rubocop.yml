@@ -10,6 +10,7 @@ AllCops:
     - 'config/environments/**/*'
     - 'config/initializers/assets.rb'
     - 'config/boot.rb'
+    - 'config/application.rb'
     - 'spec/**/*'
     - 'bin/**/*'
     - 'Gemfile'
