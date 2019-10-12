@@ -1,0 +1,8 @@
+<h1>Send a new invite</h1>
+
+<% if current_user %>
+  <%= form_tag '/invite' do %>
+    Enter a valid Github handle: <%= text_field_tag :github_handle %>
+    <%= submit_tag "Send an Invite", class: "mt1 btn btn-outline" %>
+  <% end %>
+<% end %>
