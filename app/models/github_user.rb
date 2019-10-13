@@ -15,8 +15,8 @@ class GithubUser
     User.find_by(uid: @uid)
   end
 
-  def friends?(friend)
-    (Friendship.where(user_id: self.user.id, friend_id: friend.id)).count > 0 ||
-    (Friendship.where(friend_id: self.user.id, user_id: friend.id)).count > 0
+  def friends?(current_user)
+    Friendship.exists?(user_id: self.user.id, friend_id: current_user.id) ||
+    Friendship.exists?(friend_id: self.user.id, user_id: current_user.id)
   end
 end
