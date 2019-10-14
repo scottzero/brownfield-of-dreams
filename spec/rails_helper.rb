@@ -30,7 +30,11 @@ Capybara.configure do |config|
   config.default_max_wait_time = 5
 end
 
-SimpleCov.start "rails"
+SimpleCov.start do
+  add_filter "spec/mailers/user_mailer_spec.rb"
+  add_filter "app/controllers/password_resets_controller.rb"
+  add_filter "app/controllers/application_controller.rb"
+end
 
 Shoulda::Matchers.configure do |config|
     config.integrate do |with|
