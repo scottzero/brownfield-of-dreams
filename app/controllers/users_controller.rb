@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:error] = "User does not exist"
-      redirect_to root
+      redirect_to root_path
     end
   end
 
