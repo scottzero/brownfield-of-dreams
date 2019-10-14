@@ -27,11 +27,21 @@
         <% end %>
       <h1>Followers</h1>
       <% @github.followers.each do |github_user| %>
-      <p><%= link_to "#{github_user.name}", github_user.url %></p>
+      <p><%= link_to "#{github_user.name}", github_user.url %>
+        <% if github_user.registered? && !github_user.friends?(current_user) %>
+          | <%= link_to "Add Friend", add_friend_path(github_user.uid), method: :post %>
+        <% elsif github_user.registered? && github_user.friends?(current_user) %>
+          | Already friends!!!
+        <% end %></p>
       <% end %>
       <h1>Following</h1>
       <% @github.following.each do |github_user| %>
-      <p><%= link_to "#{github_user.name}", github_user.url %></p>
+      <p><%= link_to "#{github_user.name}", github_user.url %>
+        <% if github_user.registered? && !github_user.friends?(current_user) %>
+          | <%= link_to "Add Friend", add_friend_path(github_user.uid), method: :post %>   
+          <% elsif github_user.registered? && github_user.friends?(current_user) %>
+          | Already friends!!!         
+        <% end %></p>
       <% end %>
     </section>
     <% else %>

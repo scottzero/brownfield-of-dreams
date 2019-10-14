@@ -2,6 +2,8 @@ class User < ApplicationRecord
   before_create :confirmation_token
   has_many :user_videos
   has_many :videos, through: :user_videos
+  has_many :friendships
+  has_many :friends, :through => :friendships
 
   validates :email, uniqueness: true, presence: true, if: :no_github_token?
   validates_confirmation_of :password, require: true
