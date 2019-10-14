@@ -16,6 +16,7 @@ class GithubUser
   end
 
   def friends?(current_user)
+    # binding.pry
     Friendship.exists?(user_id: self.user.id, friend_id: current_user.id) ||
     Friendship.exists?(friend_id: self.user.id, user_id: current_user.id)
   end
