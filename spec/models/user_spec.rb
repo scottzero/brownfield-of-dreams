@@ -21,5 +21,27 @@ RSpec.describe User, type: :model do
       expect(admin.role).to eq('admin')
       expect(admin.admin?).to be_truthy
     end
+
+    it 'tests update github method' do
+      admin = User.create(email: 'admin@email.com', password: 'admin', first_name:'Bob', role: 1, github_token: ENV['GITHUB_TOKEN'])
+      admin.update_github(admin.github_token, nil)
+      expect(admin.github_token).to eq(ENV['GITHUB_TOKEN'])
+      expect(admin.uid).to eq(nil)
+    end
+
+    it "tests activate method" do
+      admin = User.create(email: 'admin@email.com', password: 'admin', first_name:'Bob', role: 1, github_token: ENV['GITHUB_TOKEN'])
+      expect(admin.activate).to be_truthy
+    end
+
+    it "tests no_github_token method " do
+      admin = User.create(email: 'admin@email.com', password: 'admin', first_name:'Bob', role: 1, github_token: ENV['GITHUB_TOKEN'])
+      expect(admin.no_github_token?).to be_falsey
+    end
+
+    it "tests bookmark method" do
+      admin = User.create(email: 'admin@email.com', password: 'admin', first_name:'Bob', role: 1, github_token: ENV['GITHUB_TOKEN'])
+      expect(admin.bookmarks.empty?).to be_truthy
+    end
   end
 end
