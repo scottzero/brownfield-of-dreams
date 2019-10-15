@@ -31,6 +31,7 @@ describe "github API" do
         expect(page).to have_content("Repos")
         expect(page).to have_content("Followers")
         expect(page).to have_content("Following")
+        expect(page).to have_content("Friends")
         expect(page).to_not have_content("Link to Github")
     end
 end
