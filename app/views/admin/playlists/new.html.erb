@@ -1,0 +1,5 @@
+<%= form_for [:admin, Playlist.new] do |f| %>
+<%= f.label :youtube_id, "YouTube Playlist ID" %>
+<%= f.text_field :youtube_id %>
+<%= f.submit "Create Tutorial" %>
+<% end %>

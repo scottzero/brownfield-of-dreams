@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def bookmarks
-    videos.order("videos.tutorial_id, videos.position")
+    videos.order("videos.tutorial_id, videos.position").includes(:tutorial)
   end
 
   def activate

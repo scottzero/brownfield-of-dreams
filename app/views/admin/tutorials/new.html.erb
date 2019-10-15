@@ -4,8 +4,6 @@
   <%= f.text_field :title, class: "block col-4 field" %>
   <%= f.label :description %>
   <%= f.text_area :description, class: "block col-4 field"  %>
-  <%= f.label :thumbnail %>
-  <%= f.text_field :thumbnail, class: "block col-4 field"  %>
 
   <h3>Videos</h3>
 
@@ -14,8 +12,6 @@
     <%= video.text_field :title, class: "block col-4 field" %>
     <%= video.label :description %>
     <%= video.text_field :description, class: "block col-4 field" %>
-    <%= video.label :thumbnail %>
-    <%= video.text_field :thumbnail, class: "block col-4 field" %>
     <%= video.label "YouTube ID" %>
     <%= video.text_field :video_id, class: "block col-4 field" %>
   <% end %>
