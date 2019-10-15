@@ -23,28 +23,32 @@
       <h2>Github</h2>
         <h1>Repos</h1>
         <% @github.five_repos.each do |repo| %>
-          <p><%= link_to "#{repo.name}", repo.url %></p>
+          <li><%= link_to "#{repo.name}", repo.url %></li>
         <% end %>
         <section class="followers">
           <h1>Followers</h1>
           <% @github.followers.each do |github_user| %>
-          <p><%= link_to "#{github_user.name}", github_user.url %>
+          <li><%= link_to "#{github_user.name}", github_user.url %>
             <% if github_user.registered? && !github_user.friends?(current_user) %>
               | <%= link_to "Add Friend", add_friend_path(github_user.uid), method: :post %>
-            <% elsif github_user.registered? && github_user.friends?(current_user) %>
-              | Already friends!!!
-            <% end %></p>
+            <% end %></li>
           <% end %>
         </section>
         <section class="following">
           <h1>Following</h1>
           <% @github.following.each do |github_user| %>
-          <p><%= link_to "#{github_user.name}", github_user.url %>
+          <li><%= link_to "#{github_user.name}", github_user.url %>
             <% if github_user.registered? && !github_user.friends?(current_user) %>
-              | <%= link_to "Add Friend", add_friend_path(github_user.uid), method: :post %>   
-              <% elsif github_user.registered? && github_user.friends?(current_user) %>
-              | Already friends!!!         
-            <% end %></p>
+              | <%= link_to "Add Friend", add_friend_path(github_user.uid), method: :post %>           
+            <% end %></li>
+          <% end %>
+        </section>
+        <section class="friends">
+          <h1>Friends</h1>
+          <% (@github.following + @github.followers).uniq.each do |github_user| %>
+            <% if github_user.friends?(current_user) %>
+              <li><%= link_to "#{github_user.name}", github_user.url %></li>
+            <% end %>
           <% end %>
         </section>
     </section>
