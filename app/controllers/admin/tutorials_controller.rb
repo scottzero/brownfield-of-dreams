@@ -10,7 +10,9 @@ class Admin::TutorialsController < Admin::BaseController
   end
 
   def create
-    @tutorial = Tutorial.new(tutorial_params)
+    thumbnail = YouTube::Video.by_id(tutorial_params[:videos_attributes]["0"][:video_id]).thumbnail
+    @tutorial = Tutorial.new(tutorial_params.merge(thumbnail: thumbnail))
+    @tutorial.videos.first.update(thumbnail: thumbnail)
     if @tutorial.save
       flash[:success] = "tutorial successfully created!"
       redirect_to tutorial_path(@tutorial)
