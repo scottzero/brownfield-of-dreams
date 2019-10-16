@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   get "tags/:tag", to: "welcome#index", as: :tag
   get "/register", to: "users#new"
 
+  namespace :api do
+    namespace :v1 do
+      post "/bookmarks", to: "bookmarks#create"
+    end
+  end
+
   namespace :admin do
     get "/dashboard", to: "dashboard#show"
     delete "/tutorials/:id", to: "tutorials#destroy", as: :delete_tutorial
