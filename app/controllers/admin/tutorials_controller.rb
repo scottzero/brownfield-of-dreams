@@ -10,20 +10,24 @@ class Admin::TutorialsController < Admin::BaseController
   end
 
   def create
-    thumbnail = YouTube::Video.by_id(tutorial_params[:videos_attributes]["0"][:video_id]).thumbnail
-    @tutorial = Tutorial.new(tutorial_params.merge(thumbnail: thumbnail))
-    @tutorial.videos.first.update(thumbnail: thumbnail)
-    if @tutorial.save
-      flash[:success] = "tutorial successfully created!"
-      redirect_to tutorial_path(@tutorial)
-    else
-      flash[:error] = @tutorial.errors.full_messages.to_sentence
+    begin
+      thumbnail = YouTube::Video.by_id(tutorial_params[:videos_attributes]["0"][:video_id]).thumbnail
+      @tutorial = Tutorial.new(tutorial_params.merge(thumbnail: thumbnail))
+      @tutorial.videos.first.update(thumbnail: thumbnail)
+      if @tutorial.save && @tutorial.videos.first.save
+        flash[:success] = "tutorial successfully created!"
+        redirect_to tutorial_path(@tutorial)
+      else
+        flash[:error] = (@tutorial.errors.full_messages).uniq.to_sentence
+        render :new
+      end
+    rescue
+      flash[:error] = "Invalid YouTube Video ID"
       render :new
     end
   end
 
   def new
-    @tutorial = Tutorial.new
   end
 
   def update

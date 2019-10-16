@@ -1,6 +1,6 @@
 <h2>New Tutorial</h2>
 <section class="new-tutorials">
-<%= form_for [:admin, @tutorial] do |f| %>
+<%= form_for [:admin, Tutorial.new] do |f| %>
   <%= f.label :title, "Tutorial Title" %>
   <%= f.text_field :title, class: "block col-4 field" %>
   <%= f.label :description, "Tutorial Description" %>
@@ -10,7 +10,7 @@
 <section class="new-videos">
   <h3>Videos</h3>
 
-  <%= f.fields_for :videos, @tutorial.videos.new do |video| %>
+  <%= f.fields_for :videos, Tutorial.new.videos.new do |video| %>
     <%= video.label :title, "Title" %>
     <%= video.text_field :title, class: "block col-4 field" %>
     <%= video.label :description, "Description" %>
