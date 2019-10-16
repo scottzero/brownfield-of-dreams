@@ -4,6 +4,10 @@ class TutorialFacade < SimpleDelegator
     @video_id = video_id
   end
 
+  def no_videos?
+    videos.empty?
+  end
+
   def current_video
     if @video_id
       videos.find(@video_id)
