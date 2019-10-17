@@ -1,8 +1,8 @@
 {
-  "application.js": "/packs-test/application-afca8b5b05d9e464dd97.js",
-  "application.js.map": "/packs-test/application-afca8b5b05d9e464dd97.js.map",
+  "application.js": "/packs-test/application-0d27c21fd8663ff80f16.js",
+  "application.js.map": "/packs-test/application-0d27c21fd8663ff80f16.js.map",
   "controllers/tutorials_controller.js": "/packs-test/controllers/tutorials_controller-da9be936e68aca807e5a.js",
   "controllers/tutorials_controller.js.map": "/packs-test/controllers/tutorials_controller-da9be936e68aca807e5a.js.map",
-  "controllers/user_videos_controller.js": "/packs-test/controllers/user_videos_controller-778407d317ecd8c0d209.js",
-  "controllers/user_videos_controller.js.map": "/packs-test/controllers/user_videos_controller-778407d317ecd8c0d209.js.map"
+  "controllers/user_videos_controller.js": "/packs-test/controllers/user_videos_controller-74aed917882760471012.js",
+  "controllers/user_videos_controller.js.map": "/packs-test/controllers/user_videos_controller-74aed917882760471012.js.map"
 }

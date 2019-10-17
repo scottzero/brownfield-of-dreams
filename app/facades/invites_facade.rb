@@ -16,4 +16,4 @@ class InvitesFacade
   def name
     service[:name]
   end
-  end
+end

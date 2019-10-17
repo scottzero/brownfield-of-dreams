@@ -13,14 +13,14 @@ class Admin::VideosController < Admin::BaseController
       tutorial  = Tutorial.find(params[:tutorial_id])
       thumbnail = YouTube::Video.by_id(new_video_params[:video_id]).thumbnail
       video     = tutorial.videos.new(new_video_params.merge(thumbnail: thumbnail))
-
-      video.save
-
-      flash[:success] = "Successfully created video."
-    rescue # Sorry about this. We should get more specific instead of swallowing all errors.
-      flash[:error] = "Unable to create video."
+      if video.save
+        flash[:success] = "Successfully created video."
+      else
+        flash[:error] = video.errors.full_messages.to_sentence
+      end
+    rescue
+      flash[:error] = "Invalid YouTube ID"
     end
-
     redirect_to edit_admin_tutorial_path(id: tutorial.id)
   end
 
