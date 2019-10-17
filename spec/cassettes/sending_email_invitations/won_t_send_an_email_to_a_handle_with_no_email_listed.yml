@@ -18,14 +18,14 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
+      Server:
+      - GitHub.com
       Date:
-      - Tue, 15 Oct 2019 23:29:07 GMT
+      - Thu, 17 Oct 2019 02:05:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
-      Server:
-      - GitHub.com
       Status:
       - 404 Not Found
       X-Ratelimit-Limit:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '59'
       X-Ratelimit-Reset:
-      - '1571185747'
+      - '1571281502'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -55,12 +55,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C8CB:4E77:7BD376:E8C7F4:5DA65643
+      - D7E5:7733:65931C:FE5337:5DA7CC4E
     body:
       encoding: ASCII-8BIT
       string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/users/#get-a-single-user"}'
     http_version: 
-  recorded_at: Tue, 15 Oct 2019 23:29:07 GMT
+  recorded_at: Thu, 17 Oct 2019 02:05:01 GMT
 - request:
     method: get
     uri: https://api.github.com/users/lalalallalallalallalalllallala
@@ -82,7 +82,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 15 Oct 2019 23:29:07 GMT
+      - Thu, 17 Oct 2019 02:05:03 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -94,7 +94,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '58'
       X-Ratelimit-Reset:
-      - '1571185747'
+      - '1571281502'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -116,12 +116,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C8CC:26AF:541B93:99F6C9:5DA65643
+      - D7E6:4B56:A78BA3:19606D6:5DA7CC4F
     body:
       encoding: ASCII-8BIT
       string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/users/#get-a-single-user"}'
     http_version: 
-  recorded_at: Tue, 15 Oct 2019 23:29:07 GMT
+  recorded_at: Thu, 17 Oct 2019 02:05:01 GMT
 - request:
     method: get
     uri: https://api.github.com/users/lalalallalallalallalalllallala
@@ -143,7 +143,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 15 Oct 2019 23:29:08 GMT
+      - Thu, 17 Oct 2019 02:05:03 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -155,7 +155,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '57'
       X-Ratelimit-Reset:
-      - '1571185747'
+      - '1571281502'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -177,10 +177,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C8CD:1EFE:3BC704:69C907:5DA65644
+      - D7E7:0E31:163A696:2B56A10:5DA7CC4F
     body:
       encoding: ASCII-8BIT
       string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/users/#get-a-single-user"}'
     http_version: 
-  recorded_at: Tue, 15 Oct 2019 23:29:08 GMT
+  recorded_at: Thu, 17 Oct 2019 02:05:01 GMT
 recorded_with: VCR 4.0.0

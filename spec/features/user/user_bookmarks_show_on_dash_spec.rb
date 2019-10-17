@@ -4,7 +4,10 @@ describe "user dashboard shows bookmarks" do
 	it "in order of tutorial and position" do
 		user = create(:user)
 		tutorial= create(:tutorial)
-    	video = create(:video, tutorial_id: tutorial.id)
+		video = create(:video, tutorial_id: tutorial.id, position: 2)
+		video_1 = create(:video, tutorial_id: tutorial.id, position: 1)
+		uv = UserVideo.create(video: video, user: user)
+		uv = UserVideo.create(video: video_1, user: user)
 
     	visit '/'
 
@@ -14,12 +17,6 @@ describe "user dashboard shows bookmarks" do
     	fill_in 'session[password]', with: user.password
 
 		click_on 'Log In'
-		
-		visit tutorial_path(tutorial)
-		
-		click_on "#{video.title}"
-		
-		click_on "Bookmark"
 
 		visit dashboard_path
 

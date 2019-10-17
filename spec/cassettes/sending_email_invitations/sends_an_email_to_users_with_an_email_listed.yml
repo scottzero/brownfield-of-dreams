@@ -18,14 +18,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - GitHub.com
       Date:
-      - Tue, 15 Oct 2019 23:29:08 GMT
+      - Thu, 17 Oct 2019 02:05:04 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
-      Server:
-      - GitHub.com
       Status:
       - 200 OK
       X-Ratelimit-Limit:
@@ -33,12 +33,11 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '56'
       X-Ratelimit-Reset:
-      - '1571185747'
+      - '1571281502'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
       - Accept
-      - Accept-Encoding
       Etag:
       - W/"01f44b0b93b074e2b947d0cccd5f5d19"
       Last-Modified:
@@ -64,12 +63,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C8CE:72FB:CE6243:16EA1B2:5DA65644
+      - D7E8:61F0:604E53:FA39A9:5DA7CC50
     body:
       encoding: ASCII-8BIT
       string: '{"login":"evettetelyas","id":50186721,"node_id":"MDQ6VXNlcjUwMTg2NzIx","avatar_url":"https://avatars0.githubusercontent.com/u/50186721?v=4","gravatar_id":"","url":"https://api.github.com/users/evettetelyas","html_url":"https://github.com/evettetelyas","followers_url":"https://api.github.com/users/evettetelyas/followers","following_url":"https://api.github.com/users/evettetelyas/following{/other_user}","gists_url":"https://api.github.com/users/evettetelyas/gists{/gist_id}","starred_url":"https://api.github.com/users/evettetelyas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/evettetelyas/subscriptions","organizations_url":"https://api.github.com/users/evettetelyas/orgs","repos_url":"https://api.github.com/users/evettetelyas/repos","events_url":"https://api.github.com/users/evettetelyas/events{/privacy}","received_events_url":"https://api.github.com/users/evettetelyas/received_events","type":"User","site_admin":false,"name":"evette","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"etelyas@gmail.com","public_repos":34,"public_gists":6,"followers":6,"following":5,"created_at":"2019-05-01T23:35:47Z","updated_at":"2019-10-15T23:05:30Z"}'
     http_version: 
-  recorded_at: Tue, 15 Oct 2019 23:29:08 GMT
+  recorded_at: Thu, 17 Oct 2019 02:05:02 GMT
 - request:
     method: get
     uri: https://api.github.com/users/evettetelyas
@@ -88,14 +87,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - GitHub.com
       Date:
-      - Tue, 15 Oct 2019 23:29:09 GMT
+      - Thu, 17 Oct 2019 02:05:04 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
-      Server:
-      - GitHub.com
       Status:
       - 200 OK
       X-Ratelimit-Limit:
@@ -103,12 +102,11 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '55'
       X-Ratelimit-Reset:
-      - '1571185747'
+      - '1571281502'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
       - Accept
-      - Accept-Encoding
       Etag:
       - W/"01f44b0b93b074e2b947d0cccd5f5d19"
       Last-Modified:
@@ -134,12 +132,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C8CF:4EAA:2B9176:4B4F4F:5DA65645
+      - D7E9:4139:18B2D11:2EF61EC:5DA7CC50
     body:
       encoding: ASCII-8BIT
       string: '{"login":"evettetelyas","id":50186721,"node_id":"MDQ6VXNlcjUwMTg2NzIx","avatar_url":"https://avatars0.githubusercontent.com/u/50186721?v=4","gravatar_id":"","url":"https://api.github.com/users/evettetelyas","html_url":"https://github.com/evettetelyas","followers_url":"https://api.github.com/users/evettetelyas/followers","following_url":"https://api.github.com/users/evettetelyas/following{/other_user}","gists_url":"https://api.github.com/users/evettetelyas/gists{/gist_id}","starred_url":"https://api.github.com/users/evettetelyas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/evettetelyas/subscriptions","organizations_url":"https://api.github.com/users/evettetelyas/orgs","repos_url":"https://api.github.com/users/evettetelyas/repos","events_url":"https://api.github.com/users/evettetelyas/events{/privacy}","received_events_url":"https://api.github.com/users/evettetelyas/received_events","type":"User","site_admin":false,"name":"evette","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"etelyas@gmail.com","public_repos":34,"public_gists":6,"followers":6,"following":5,"created_at":"2019-05-01T23:35:47Z","updated_at":"2019-10-15T23:05:30Z"}'
     http_version: 
-  recorded_at: Tue, 15 Oct 2019 23:29:09 GMT
+  recorded_at: Thu, 17 Oct 2019 02:05:02 GMT
 - request:
     method: get
     uri: https://api.github.com/users/evettetelyas
@@ -158,14 +156,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - GitHub.com
       Date:
-      - Tue, 15 Oct 2019 23:29:09 GMT
+      - Thu, 17 Oct 2019 02:05:04 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
-      Server:
-      - GitHub.com
       Status:
       - 200 OK
       X-Ratelimit-Limit:
@@ -173,12 +171,11 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '54'
       X-Ratelimit-Reset:
-      - '1571185747'
+      - '1571281502'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
       - Accept
-      - Accept-Encoding
       Etag:
       - W/"01f44b0b93b074e2b947d0cccd5f5d19"
       Last-Modified:
@@ -204,10 +201,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C8D0:75B4:7BF4F4:EB090B:5DA65645
+      - D7EA:7106:166B48F:2B8CD9D:5DA7CC50
     body:
       encoding: ASCII-8BIT
       string: '{"login":"evettetelyas","id":50186721,"node_id":"MDQ6VXNlcjUwMTg2NzIx","avatar_url":"https://avatars0.githubusercontent.com/u/50186721?v=4","gravatar_id":"","url":"https://api.github.com/users/evettetelyas","html_url":"https://github.com/evettetelyas","followers_url":"https://api.github.com/users/evettetelyas/followers","following_url":"https://api.github.com/users/evettetelyas/following{/other_user}","gists_url":"https://api.github.com/users/evettetelyas/gists{/gist_id}","starred_url":"https://api.github.com/users/evettetelyas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/evettetelyas/subscriptions","organizations_url":"https://api.github.com/users/evettetelyas/orgs","repos_url":"https://api.github.com/users/evettetelyas/repos","events_url":"https://api.github.com/users/evettetelyas/events{/privacy}","received_events_url":"https://api.github.com/users/evettetelyas/received_events","type":"User","site_admin":false,"name":"evette","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"etelyas@gmail.com","public_repos":34,"public_gists":6,"followers":6,"following":5,"created_at":"2019-05-01T23:35:47Z","updated_at":"2019-10-15T23:05:30Z"}'
     http_version: 
-  recorded_at: Tue, 15 Oct 2019 23:29:09 GMT
+  recorded_at: Thu, 17 Oct 2019 02:05:02 GMT
 recorded_with: VCR 4.0.0
