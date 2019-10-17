@@ -14,7 +14,7 @@
   <%= link_to "Send an Invite", invite_path, class: "btn btn-primary mb1 bg-teal" %>
   <section>
     <h1>Bookmarked Segments</h1>
-    <% current_user.bookmarks.each do |video| %>
+    <% current_user.bookmarks.uniq.each do |video| %>
       <li><%= link_to "#{video.tutorial.title} | #{video.title}", tutorial_path(video.tutorial.id, video_id: video.id) %></li>
     <% end %>
   </section>
