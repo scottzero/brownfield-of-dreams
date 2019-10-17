@@ -45,7 +45,7 @@
         </section>
         <section class="friends">
           <h1>Friends</h1>
-          <% (@github.following + @github.followers).uniq.each do |github_user| %>
+          <% @github.all_followers.each do |github_user| %>
             <% if github_user.friends?(current_user) %>
               <li><%= link_to "#{github_user.name}", github_user.url %></li>
             <% end %>

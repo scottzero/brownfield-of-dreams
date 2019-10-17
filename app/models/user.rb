@@ -22,6 +22,10 @@ class User < ApplicationRecord
     self.save
   end
 
+  def github_user
+    GithubUser.find_by(uid: self.uid)
+  end
+
   def bookmarks
     videos.order("videos.tutorial_id, videos.position").includes(:tutorial)
   end

@@ -42,4 +42,10 @@ class GithubFacade
       GithubUser.new(following_hash)
     end
   end
+
+  def all_followers
+    (followers + following).uniq do |user|
+      user.name
+    end
+  end
 end
